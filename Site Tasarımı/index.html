@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(246, 242, 242);
+        }
+
+        .navbar {
+            background-color: rgb(41, 66, 80);
+            height: 70px;
+        }
+
+        .navbarUl {
+            position: absolute;
+            left: 230px;
+            top: 5px;
+
+        }
+
+        .navbarUl li {
+            display: inline-flex;
+            list-style: none;
+            padding-right: 15px;
+        }
+
+        .navbarUl li a {
+            text-decoration: none;
+            font-size: 21px;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .navbarUl li a:hover {
+            color: rgb(190, 184, 184);
+            transition: all 0.3s;
+        }
+
+        .navbarUl li a i {
+            margin-right: 25px;
+            font-size: 25px;
+        }
+
+        .leftContainer {
+            width: 320px;
+            height: 440px;
+            position: absolute;
+            top: 100px;
+            left: 200px;
+            border: 1px solid rgb(219, 209, 209);
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        .imageLeftContainer {
+            background-image: url(/Resimler/computer.jpeg);
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 7px 7px 0px 0px;
+        }
+
+        .picturesBg {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            backdrop-filter: blur(8px);
+            position: absolute;
+            top: 140px;
+            left: 108px;
+            border: 1px solid rgb(223, 214, 214);
+        }
+
+        .pictures {
+            background-image: url(/Resimler/white-robot-holding-book_946288-5864-Photoroom.png-Photoroom.png);
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: scale(1.3);
+            position: absolute;
+            top: 15px;
+        }
+
+        .textH2 {
+            position: absolute;
+            top: 250px;
+            left: 95px;
+        }
+
+        .textP {
+            position: absolute;
+            top: 285px;
+            left: 70px;
+            font-size: 18px;
+        }
+
+        .button {
+            position: absolute;
+            top: 380px;
+            left: 120px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            width: 85px;
+            text-align: center;
+            border-radius: 4px;
+            padding: 3px;
+        }
+
+        .button i {
+            margin-right: 5px;
+        }
+
+        .softwareCourseCard {
+            position: absolute;
+            top: 100px;
+            left: 600px;
+            width: 650px;
+            height: 80px;
+            border: 1px solid rgb(219, 209, 209);
+            border-radius: 8px;
+            background-color: white;
+        }
+
+        .card1,
+        .card2,
+        .card3,
+        .card4,
+        .card5 {
+            width: 650px;
+            height: 200px;
+            border: 1px solid rgb(219, 209, 209);
+            border-radius: 8px;
+            background: white;
+            position: absolute;
+        }
+
+        .card1 {
+            top: 200px;
+            left: 600px;
+        }
+
+        .card2 {
+            top: 420px;
+            left: 600px;
+        }
+
+        .card3 {
+            top: 640px;
+            left: 600px;
+        }
+
+        .card4 {
+            top: 860px;
+            left: 600px;
+        }
+
+        .card5 {
+            top: 1080px;
+            left: 600px;
+        }
+
+        .cards div img {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 120px;
+            height: 120px;
+        }
+
+        .cards div h2 {
+            position: absolute;
+            top: -10px;
+            left: 250px;
+        }
+
+        .cards div p {
+            position: absolute;
+            left: 145px;
+            top: 35px;
+        }
+
+        .horizontal {
+            width: 100%;
+            border-bottom: 1px solid rgb(219, 209, 209);
+            position: absolute;
+            top: 145px;
+        }
+
+        .button1 {
+            width: 155px;
+            height: 25px;
+            border: 1px solid gray;
+            position: absolute;
+            right: 150px;
+            bottom: 10px;
+            text-decoration: none;
+            background-color: rgba(255, 0, 0, 0.763);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 3px;
+        }
+
+        .button2 {
+            width: 120px;
+            height: 25px;
+            border: 1px solid gray;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            text-decoration: none;
+            background-color: rgba(0, 0, 255, 0.556);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 4px;
+            padding: 3px;
+        }
+
+        .button1 i {
+            margin-right: 5px;
+        }
+
+        .button2 i {
+            margin-right: 5px;
+        }
+
+        .cardsLink {
+            position: absolute;
+            top: 600px;
+            left: 200px;
+        }
+
+        .cardsLink a {
+            display: block;
+            border: 1px solid rgb(219, 209, 209);
+            background-color: white;
+            width: 320px;
+            height: 30px;
+            text-decoration: none;
+            color: rgb(65, 57, 57);
+            font-size: 18px;
+            padding-left: 10px;
+            padding-top: 15px;
+            transition: all 2s;
+        }
+
+        .cardsLink a:hover {
+            background-color: rgb(205, 199, 199);
+            transition: all 1s;
+        }
+
+        .bottomButton {
+            position: absolute;
+            top: 1320px;
+            left: 875px;
+            text-decoration: none;
+            border: 1px solid rgb(219, 209, 209);
+            border-radius: 4px;
+            color: rgb(87, 87, 200);
+            padding: 8px;
+            transition: all 1s;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .bottomButton:hover {
+            color: white;
+            background-color: rgb(87, 87, 200);
+            transition: all 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul class="navbarUl">
+            <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#">Html</a></li>
+            <li><a href="#">Css</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">React</a></li>
+            <li><a href="#">Angular</a></li>
+            <li><a href="#">Bootstrap</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">Django</a></li>
+            <li><a href="#">C#</a></li>
+            <li><a href="#">Nodejs</a></li>
+            <li><a href="#">Asp.Net Core</a></li>
+            <li><a href="#">SQL</a></li>
+            <li><a href="#">Php</a></li>
+        </ul>
+    </div>
+
+    <div class="leftContainer">
+        <div class="imageLeftContainer">
+        </div>
+        <div class="picturesBg">
+            <div class="pictures">
+            </div>
+        </div>
+        <h2 class="textH2">Emre Bayram</h2>
+        <p class="textP">Web Geliştirici & Öğrenci</p>
+        <a href="#" class="button"><i class="fa-brands fa-youtube"></i>Youtube</a>
+    </div>
+    <div class="softwareCourseCard">
+        <h1 style="text-align: center;">Yazılım Kursları</h1>
+    </div>
+    <div class="cardsLink">
+        <a href="#">Youtube</a>
+        <a href="#">Udemy</a>
+        <a href="#">Discord</a>
+        <a href="#">Telegram</a>
+        <a href="#">İnstagram</a>
+    </div>
+    <div class="cards">
+        <div class="card1">
+            <img src="/Resimler/html.png" alt="">
+            <h2>HTML Eğitim Seti</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, minus assumenda nihil, non
+                perspiciatis, quam ipsa maxime necessitatibus dolorum nisi porro mollitia eligendi iure error sed
+                pariatur optio asperiores. Necessitatibus?</p>
+            <div class="horizontal"></div>
+            <a href="#" class="button1"><i class="fa-solid fa-circle-chevron-right"></i>İndirimli Kupon Al</a>
+            <a href="#" class="button2"><i class="fa-solid fa-circle-chevron-right"></i>Kursu İncele</a>
+        </div>
+
+        <div class="card2">
+            <img src="/Resimler/css.jpeg" alt="">
+            <h2>CSS Eğitim Seti</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, minus assumenda nihil, non
+                perspiciatis, quam ipsa maxime necessitatibus dolorum nisi porro mollitia eligendi iure error sed
+                pariatur optio asperiores. Necessitatibus?</p>
+            <div class="horizontal"></div>
+            <a href="#" class="button1"><i class="fa-solid fa-circle-chevron-right"></i>İndirimli Kupon Al</a>
+            <a href="#" class="button2"><i class="fa-solid fa-circle-chevron-right"></i>Kursu İncele</a>
+        </div>
+        <div>git deneme</div>
+        <div class="card3">
+            <img src="/Resimler/javascript.png" alt="">
+            <h2>Javascript Eğitim Seti</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, minus assumenda nihil, non
+                perspiciatis, quam ipsa maxime necessitatibus dolorum nisi porro mollitia eligendi iure error sed
+                pariatur optio asperiores. Necessitatibus?</p>
+            <div class="horizontal"></div>
+            <a href="#" class="button1"><i class="fa-solid fa-circle-chevron-right"></i>İndirimli Kupon Al</a>
+            <a href="#" class="button2"><i class="fa-solid fa-circle-chevron-right"></i>Kursu İncele</a>
+        </div>
+
+        <div class="card4">
+            <img src="/Resimler/react.png" alt="">
+            <h2>HTML Eğitim Seti</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, minus assumenda nihil, non
+                perspiciatis, quam ipsa maxime necessitatibus dolorum nisi porro mollitia eligendi iure error sed
+                pariatur optio asperiores. Necessitatibus?</p>
+            <div class="horizontal"></div>
+            <a href="#" class="button1"><i class="fa-solid fa-circle-chevron-right"></i>İndirimli Kupon Al</a>
+            <a href="#" class="button2"><i class="fa-solid fa-circle-chevron-right"></i>Kursu İncele</a>
+        </div>
+
+        <div class="card5">
+            <img src="/Resimler/node.png" alt="">
+            <h2>Node Eğitim Seti</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, minus assumenda nihil, non
+                perspiciatis, quam ipsa maxime necessitatibus dolorum nisi porro mollitia eligendi iure error sed
+                pariatur optio asperiores. Necessitatibus?</p>
+            <div class="horizontal"></div>
+            <a href="#" class="button1"><i class="fa-solid fa-circle-chevron-right"></i>İndirimli Kupon Al</a>
+            <a href="#" class="button2"><i class="fa-solid fa-circle-chevron-right"></i>Kursu İncele</a>
+        </div>
+    </div>
+    <a href="#" class="bottomButton">Tüm Kursları İncele</a>
+    <div style="position: absolute; top: 1400px; width: 5px; height: 5px;"> </div>
+    <script src="/Site Örnek/app.js"></script>
+</body>
+
+</html>
